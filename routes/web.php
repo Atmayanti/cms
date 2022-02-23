@@ -1,7 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use app\Http\Controllers\PageController;
+use App\Http\Controllers\PageController;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,14 +14,25 @@ use app\Http\Controllers\PageController;
 |
 */
 
-Route::get('/', function () {
-    return 'Hi! Selamat Datang di Website Laravel';
-});
+// // PRAKTIKUM 1
 
-Route::get('/about', function () {
-    return 'NIM : 2041720016 <br> Nama : Atmayanti <br> Kelas : TI 2G';
-});
+// Route::get('/', function () {
+//     return 'Hi! Selamat Datang di Website Laravel';
+// });
 
-Route::get('/articles/{id}', function ($id) {
-    return 'Ini adalah halaman Artikel dengan ID : '.$id;
-});
+// Route::get('/about', function () {
+//     return 'NIM : 2041720016 <br> Nama : Atmayanti <br> Kelas : TI 2G';
+// });
+
+// Route::get('/articles/{id}', function ($id) {
+//     return 'Ini adalah halaman Artikel dengan ID : '.$id;
+// });
+
+
+// PRAKTIKUM 2
+
+Route::get('/', [PageController::class, 'index']);
+
+Route::get('/about', [PageController::class, 'about']);
+
+Route::get('/articles/{id}', [PageController::class, 'articles']);
