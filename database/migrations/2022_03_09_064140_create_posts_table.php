@@ -18,6 +18,8 @@ class CreatePostsTable extends Migration
             $table->string('name', 150)->index();
             $table->string('slug', 100)->index();
             $table->text('image');
+            $table->text('content');
+            $table->float('price');
             $table->boolean('draft')->default(false);
             $table->timestamps();
         });

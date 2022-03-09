@@ -8,6 +8,8 @@ use App\Http\Controllers\ArticleController;
 use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProgramController;
+use App\Http\Controllers\PostController;
+use App\Models\Post;
 
 /*
 |--------------------------------------------------------------------------
@@ -89,9 +91,11 @@ Route::get('/', function(){
     return view('index');
 });
 
-Route::get('/shop', function(){
-    return view('shop');
-});
+// Route::get('/shop', function(){
+//     return view('shop');
+// });
+
+Route::get('/shop', [PostController::class, 'index']);
 
 Route::get('/shop-detail', function(){
     return view('shop-detail');
