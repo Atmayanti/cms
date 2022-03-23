@@ -1,15 +1,16 @@
 <?php
 
+use App\Models\Post;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\NewsController;
+use App\Http\Controllers\PageController;
+use App\Http\Controllers\PostController;
 use App\Http\Controllers\AboutController;
 use App\Http\Controllers\ArticleController;
-use App\Http\Controllers\CategoryController;
-use App\Http\Controllers\NewsController;
 use App\Http\Controllers\ProgramController;
-use App\Http\Controllers\PostController;
-use App\Models\Post;
+use App\Http\Controllers\CategoryController;
 
 Auth::routes();
 
@@ -132,6 +133,6 @@ Route::get('/gallery', function(){
     return view('gallery');
 });
 
-Route::get('/home', function(){
-    return view('home');
-});
+// Route::get('/home', function(){
+//     return view('home');
+// });

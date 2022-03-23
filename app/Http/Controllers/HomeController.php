@@ -3,16 +3,13 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Routing\Controller;
+use Illuminate\Support\Facades\Auth;
 
 class HomeController extends Controller
 {
     public function index(){
-        return '
-            <h1>Hi! Selamat Datang di Educastudio</h1><br>
-            <a href="/category">Category</a><br>
-            <a href="/program">Program</a><br>
-            <a href="/news">News</a><br>
-            <a href="/about-us">About Us</a><br>
-        ';
+        $user = Auth::user();
+        return view('home', ['user' => $user]);
     }
 }

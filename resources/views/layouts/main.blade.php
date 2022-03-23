@@ -198,8 +198,10 @@
     </div>
     <!-- End Top Search -->
 
-
-    @yield('container')
+    <div>
+        @yield('container')
+    </div>
+    
 
     
     <!-- Start Instagram Feed  -->
