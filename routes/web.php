@@ -136,3 +136,5 @@ Route::get('/gallery', function(){
 // Route::get('/home', function(){
 //     return view('home');
 // });
+
+Route::resource('articles', ArticleController::class);
